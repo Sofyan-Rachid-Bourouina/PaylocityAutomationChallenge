@@ -1,18 +1,16 @@
 package com.Paylocity.step_definitions;
 
 import com.Paylocity.utilities.APISpecification;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 
 import java.util.List;
-import java.util.Map;
+
 
 public class ApiRequests {
    static Response response;
@@ -21,6 +19,7 @@ public class ApiRequests {
     @Given("I logged into Paylocity api using {string} and {string}")
     public void i_logged_into_Paylocity_api_using_and(String username, String password) {
        rspc = RestAssured.given().spec(APISpecification.requestSpecification());
+      // RestAssured.given().accept(ContentType.JSON).contentType(ContentType.JSON).
 
     }
 
