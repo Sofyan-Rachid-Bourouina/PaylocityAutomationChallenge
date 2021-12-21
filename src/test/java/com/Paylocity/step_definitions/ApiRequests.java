@@ -19,7 +19,7 @@ public class ApiRequests {
     @Given("I logged into Paylocity api using {string} and {string}")
     public void i_logged_into_Paylocity_api_using_and(String username, String password) {
        rspc = RestAssured.given().spec(APISpecification.requestSpecification());
-      // RestAssured.given().accept(ContentType.JSON).contentType(ContentType.JSON).
+
 
     }
 
